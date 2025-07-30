@@ -1,0 +1,10 @@
+{
+	"records": [
+		{
+			"key": "allowed-terraform-version",
+			"source": "./allowed-terraform-version.sentinel",
+			"sourceSum": "",
+			"dest": "C:/Users/Admin/Documents/software/learn-terraform-enforce-policies/allowed-terraform-version.sentinel"
+		}
+	]
+}

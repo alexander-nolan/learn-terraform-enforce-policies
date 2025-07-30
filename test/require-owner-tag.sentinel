@@ -1,0 +1,12 @@
+import "tfplan/v2" as tfplan
+
+# Get all resources in the plan
+resources = tfplan.resource_changes
+
+# Check if every resource has an "owner" tag (if tags exist)
+main = rule {
+  all resources as r {
+    not r.change.after is undefined and
+    ("tags" in r.change.after ? "owner" in r.change.after.tags : true)
+  }
+}
